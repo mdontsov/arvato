@@ -23,6 +23,6 @@ public class BasePageTest {
 
     @Test
     public void open() throws Exception {
-        basePage.getDriver().get("http://www.google.com");
+        basePage.getOpen();
     }
 }
