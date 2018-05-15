@@ -7,7 +7,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 public class DriverFactory {
 
     private WebDriver driver;
-    private FirefoxOptions firefoxOptions;
 
     protected WebDriver getDriver() {
         return driver;
@@ -32,7 +31,7 @@ public class DriverFactory {
     }
 
     private FirefoxOptions firefoxOptions() {
-        firefoxOptions = new FirefoxOptions();
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.addArguments("--ignore-certificate-errors");
         return firefoxOptions;
     }

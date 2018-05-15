@@ -13,5 +13,4 @@ public class BasePage extends DriverFactory {
         String url = "http://www.arvato.ee";
         getDriver().get(url);
     }
-
 }
