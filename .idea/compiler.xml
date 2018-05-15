@@ -9,5 +9,8 @@
         <module name="arvato" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="arvato" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

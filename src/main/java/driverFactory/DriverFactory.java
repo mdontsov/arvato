@@ -6,9 +6,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
-    protected WebDriver driver() {
+    public static WebDriver driver() {
         return driver;
     }
 
