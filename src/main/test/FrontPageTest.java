@@ -29,7 +29,8 @@ public class FrontPageTest extends DriverFactory implements DriverActions {
     @Test
     public void open() throws Exception {
         openUrl("http://www.arvato.ee");
-        click(frontPage.crmLink);
-        click(crmPage.homeLink);
+        clickRandomly(frontPage.itdcLink);
+//        click(frontPage.crmLink);
+//        click(crmPage.homeLink);
     }
 }

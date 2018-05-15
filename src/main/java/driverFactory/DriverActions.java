@@ -6,10 +6,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Random;
 
 import static driverFactory.DriverFactory.driver;
 
 public interface DriverActions {
+
+    default WebDriverWait webDriverWait() {
+        return new WebDriverWait(driver(), 10);
+    }
 
     default void click(Object object) throws NoSuchElementException, InvalidArgumentException {
         if (object instanceof WebElement) {
@@ -20,6 +25,13 @@ public interface DriverActions {
                 element.click();
             }
         }
+    }
+
+    default void clickRandomly(List<WebElement> elements) {
+        webDriverWait().until(ExpectedConditions.visibilityOfAllElements(elements));
+        Random r = new Random();
+        int i = r.nextInt(elements.size());
+        elements.get(i).click();
     }
 
     default boolean isClickable(WebElement element) throws NoSuchElementException {
