@@ -8,7 +8,7 @@ public class DriverFactory {
 
     private WebDriver driver;
 
-    protected WebDriver getDriver() {
+    protected WebDriver driver() {
         return driver;
     }
 
